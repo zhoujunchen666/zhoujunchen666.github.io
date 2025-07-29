@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="https://cdn.luogu.com.cn/upload/usericon/991587.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zhoujunchen">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="题目传送门。 呀，一看到题目 A+B Problem，我好怕怕怕怕怕怕怕怕怕怕哦，但不用怕，因为我们有万能的 C艹！！1 点进题目，一看哇啊啊啊啊，这也能评橙。我幼儿园小班毕业都可以 111 秒想出思路，可是如何用代码实现呢？ 经过我深思熟虑，日日夜夜，废寝忘食的思考，这实际上就可以用：  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P1601 A+B Problem（高精） 题解">
+<meta property="og:url" content="http://zhoujunchen666.github.io/2025/07/29/P1601-A-B-Problem%EF%BC%88%E9%AB%98%E7%B2%BE%EF%BC%89-%E9%A2%98%E8%A7%A3/index.html">
+<meta property="og:site_name" content="zhoujunchen&#39;s Blog">
+<meta property="og:description" content="题目传送门。 呀，一看到题目 A+B Problem，我好怕怕怕怕怕怕怕怕怕怕哦，但不用怕，因为我们有万能的 C艹！！1 点进题目，一看哇啊啊啊啊，这也能评橙。我幼儿园小班毕业都可以 111 秒想出思路，可是如何用代码实现呢？ 经过我深思熟虑，日日夜夜，废寝忘食的思考，这实际上就可以用：  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢？  用什么呢">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-29T11:23:13.385Z">
+<meta property="article:modified_time" content="2025-07-29T11:24:16.119Z">
+<meta property="article:author" content="zhoujunchen">
+<meta property="article:tag" content="题解">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>P1601 A+B Problem（高精） 题解 - zhoujunchen&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zhoujunchen666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":50,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"C++"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      packages: {'[+]': ['amsmath', 'amssymb', 'bm']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>zhoujunchen&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://cdn.luogu.com.cn/upload/image_hosting/a6sdlqye.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="P1601 A+B Problem（高精） 题解"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          618 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">P1601 A+B Problem（高精） 题解</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="题目传送门"><a class="markdownIt-Anchor" href="#题目传送门"></a> <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1UT42167xb/">题目传送门</a>。</h1>
+<p>呀，一看到题目 <code>A+B Problem</code>，我好怕怕怕怕怕怕怕怕怕怕哦，但不用怕，因为我们有万能的 C艹！！1</p>
+<p>点进题目，一看哇啊啊啊啊，这也能评橙。我幼儿园小班毕业都可以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 秒想出思路，可是如何用代码实现呢？</p>
+<p>经过我深思熟虑，日日夜夜，废寝忘食的思考，这实际上就可以用：</p>
+<h6 id="用什么呢"><a class="markdownIt-Anchor" href="#用什么呢"></a> 用什么呢？</h6>
+<h5 id="用什么呢-2"><a class="markdownIt-Anchor" href="#用什么呢-2"></a> 用什么呢？</h5>
+<h4 id="用什么呢-3"><a class="markdownIt-Anchor" href="#用什么呢-3"></a> 用什么呢？</h4>
+<h3 id="用什么呢-4"><a class="markdownIt-Anchor" href="#用什么呢-4"></a> 用什么呢？</h3>
+<h2 id="用什么呢-5"><a class="markdownIt-Anchor" href="#用什么呢-5"></a> 用什么呢？</h2>
+<h1 id="用什么呢-6"><a class="markdownIt-Anchor" href="#用什么呢-6"></a> 用什么呢？</h1>
+<h2 id="用什么呢-7"><a class="markdownIt-Anchor" href="#用什么呢-7"></a> 用什么呢？</h2>
+<h3 id="用什么呢-8"><a class="markdownIt-Anchor" href="#用什么呢-8"></a> 用什么呢？</h3>
+<h4 id="用什么呢-9"><a class="markdownIt-Anchor" href="#用什么呢-9"></a> 用什么呢？</h4>
+<h5 id="用什么呢-10"><a class="markdownIt-Anchor" href="#用什么呢-10"></a> 用什么呢？</h5>
+<h6 id="用什么呢-11"><a class="markdownIt-Anchor" href="#用什么呢-11"></a> 用什么呢？</h6>
+<p>没错，你说得对，经过我深思熟虑，日日夜夜，废寝忘食的思考，发现了一个东西，让我请它闪亮登场！！1</p>
+<h1 id="当当当当"><a class="markdownIt-Anchor" href="#当当当当"></a> 当当当当！</h1>
+<h1 id="当当当当-2"><a class="markdownIt-Anchor" href="#当当当当-2"></a> 当当当当！</h1>
+<h1 id="当当当当-3"><a class="markdownIt-Anchor" href="#当当当当-3"></a> 当当当当！</h1>
+<h1 id="当当当当-4"><a class="markdownIt-Anchor" href="#当当当当-4"></a> 当当当当！</h1>
+<h1 id="当当当当-5"><a class="markdownIt-Anchor" href="#当当当当-5"></a> 当当当当！</h1>
+<p>没错，经过我深思熟虑，日日夜夜，废寝忘食的思考，发现了一个东西，这个东西就是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span></span></span></span>。</p>
+<p>你说得对，但是这个东西怎么用呢，我们来到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1UT42167xb/">题解区</a>，找到一篇代码，嗯，就这篇辣！！1</p>
+<p>这是代码：</p>
+<h1 id="include-iostream"><a class="markdownIt-Anchor" href="#include-iostream"></a> $ include <iostream>$</h1>
+<h1 id="include-cstdio"><a class="markdownIt-Anchor" href="#include-cstdio"></a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext> </mtext><mi>i</mi><mi>n</mi><mi>c</mi><mi>l</mi><mi>u</mi><mi>d</mi><mi>e</mi><mo>&lt;</mo><mi>c</mi><mi>s</mi><mi>t</mi><mi>d</mi><mi>i</mi><mi>o</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">\ include &lt;cstdio&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mspace"> </span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">u</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span></h1>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>s</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>s</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>d</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">using namespace std;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">e</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">d</span><span class="mpunct">;</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>n</mi><mi>t</mi><mi>m</mi><mi>a</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mo stretchy="false">{</mo></mrow><annotation encoding="application/x-tex">int main () \{</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mclose">)</span><span class="mopen">{</span></span></span></span></p>
+<p>$    int a,b;$</p>
+<p>$    cin &gt;&gt; a &gt;&gt; b;$</p>
+<p>$    cout &lt;&lt; a+b;$</p>
+<p>$    return 0;$</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">}</span></span></span></span></p>
+<p>可是我们交上去。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/227580174">提交记录</a>。</p>
+<h1 id="为什么没有-ac"><a class="markdownIt-Anchor" href="#为什么没有-ac"></a> 为什么没有 AC！！！</h1>
+<h1 id="为什么"><a class="markdownIt-Anchor" href="#为什么"></a> 为什么！！！</h1>
+<h1 id="kkksc03-回答我"><a class="markdownIt-Anchor" href="#kkksc03-回答我"></a> @kkksc03 回答我！！！</h1>
+<h1 id="look-in-my-eyes"><a class="markdownIt-Anchor" href="#look-in-my-eyes"></a> look in my eyes！！！</h1>
+<p>经过我深思熟虑，日日夜夜，废寝忘食的思考，终于发现了一个坑点</p>
+<h3 id="是什么呢"><a class="markdownIt-Anchor" href="#是什么呢"></a> 是什么呢？</h3>
+<h2 id="是什么呢-2"><a class="markdownIt-Anchor" href="#是什么呢-2"></a> 是什么呢？</h2>
+<h1 id="是什么呢-3"><a class="markdownIt-Anchor" href="#是什么呢-3"></a> 是什么呢？</h1>
+<h1 id="那个玩-florr-的这都不会给我滚出去"><a class="markdownIt-Anchor" href="#那个玩-florr-的这都不会给我滚出去"></a> 那个玩 florr 的！这都不会！给我滚出去！</h1>
+<p>没错，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>500</mn></msup></mrow><annotation encoding="application/x-tex">a,b\le 10^{500}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span>，完了我不知道用什么算法，我好怕怕怕怕怕怕怕怕怕怕怕哦，但是没关系，我们有万能的<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/solution/P1601">题解区</a>，我们随便 ctrl+c 一个代码下来。</p>
+<p><span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 1: #̲include&lt;bits/st…'>#include&lt;bits/stdc++.h&gt;
+#define int long long
+using namespace std;
+string add(string a, string b)
+{
+    int len = max(a.size(), b.size()), jw = 0;
+    string c = &quot;&quot;;
+    while (a.size() &lt; len) a = &#039;0&#039; + a;
+    while (b.size() &lt; len) b = &#039;0&#039; + b;
+    for (int i = len - 1; i &gt;= 0; i--)
+    {
+        int t1 = a[i] - &#039;0&#039;, t2 = b[i] - &#039;0&#039;;
+        int t = t1 + t2 + jw;
+        jw = t / 10;
+        t %= 10;
+        char ch = t + &#039;0&#039;;
+        c = ch + c;
+    }
+    if (jw != 0) return &#039;1&#039; + c;
+    return c;
+}
+signed main()
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	string s1, s2;
+	cin &gt;&gt; s1 &gt;&gt; s2;
+	cout &lt;&lt; add(s1, s2);
+    return 0;
+}</span></p>
+<p>我们交上去，就可以<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/227555630">AC</a>了。</p>
+<h1 id="你们不可以这样抄题解哦只有我可以因为我认识-chen_zhe-想封谁就封谁哈哈哈哈你们怕了吧"><a class="markdownIt-Anchor" href="#你们不可以这样抄题解哦只有我可以因为我认识-chen_zhe-想封谁就封谁哈哈哈哈你们怕了吧"></a> 你们不可以这样抄题解哦，只有我可以，因为我认识 chen_zhe 想封谁就封谁，哈哈哈哈你们怕了吧。</h1>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%A2%98%E8%A7%A3/" class="print-no-link">#题解</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>P1601 A+B Problem（高精） 题解</div>
+      <div>http://zhoujunchen666.github.io/2025/07/29/P1601-A-B-Problem（高精）-题解/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zhoujunchen</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年7月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/07/27/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc416-d-ABC416D-Match-Mod-Minimize-2/" title="题解：AT_abc416_d [ABC416D] Match, Mod, Minimize 2">
+                        <span class="hidden-mobile">题解：AT_abc416_d [ABC416D] Match, Mod, Minimize 2</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"zhoujunchen666/blogtalk","repo-id":"R_kgDOPTGBrA","category":"General","category-id":"DIC_kwDOPTGBrM4Ctbum","theme-light":"light","theme-dark":"dark","mapping":"bottom","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证114514号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=2147483648"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备1919810号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
