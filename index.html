@@ -288,6 +288,168 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/2025/10/28/%E9%A2%98%E8%A7%A3%EF%BC%9AP11919-PA-2025-%E6%B0%B4%E6%97%8F%E9%A6%86-Akwarium/" target="_self">
+          题解：P11919 [PA 2025] 水族馆 / Akwarium
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/28/%E9%A2%98%E8%A7%A3%EF%BC%9AP11919-PA-2025-%E6%B0%B4%E6%97%8F%E9%A6%86-Akwarium/" target="_self">
+        <div>
+          题意 给你一个正整数 nnn。 让你求出 a2+b2+h2≤n\sqrt {a^2+b^2+h^2}\le na2+b2+h2​≤n，的解的数量（aaa，bbb，hhh 都是正整数。）  90 pts 暴力枚举。 第一层循环枚举 nnn，第二层枚举 aaa，第三层枚举 bbb，然后就可以计算出 hhh，判断是否满足条件即可。 123456789101112131415161718#include
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-28 16:20" pubdate>
+              2025-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/28/%E9%A2%98%E8%A7%A3%EF%BC%9ACF919D-Substring/" target="_self">
+          题解：CF919D Substring
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/28/%E9%A2%98%E8%A7%A3%EF%BC%9ACF919D-Substring/" target="_self">
+        <div>
+          这翻译的啥啊，还有一句重要的话没翻，就是如果这个权值可以无限大，就输出 −1-1−1。 如何让权值无限大，显然是有环。 用拓扑排序判环。 然后就剩下一个 DAG，可以使用 dp。 定义 dpi,jdp_{i,j}dpi,j​ 满足以 iii 结尾，出现最多的字母为 jjj 的路径的最大权值。 若有 uuu 到 vvv 的边，那么方程如下： dpv,j=max⁡(dpv,j,dpu,j+[sv=j]
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-28 16:19" pubdate>
+              2025-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/10/28/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc407-e-ABC407E-Most-Valuable-Parentheses/" target="_self">
+          题解：AT_abc407_e [ABC407E] Most Valuable Parentheses
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/10/28/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc407-e-ABC407E-Most-Valuable-Parentheses/" target="_self">
+        <div>
+          贪心题，我们先假设是这样选数的，()()()()()...，那么答案就是奇数位的和，删除的是偶数位。 从前往后处理数列时，每遇到一个奇数位 iii，就可以找一下在位置 iii 之前被删除的数中是否有比 aia_iai​ 还大的数。   如果没有就将 aia_iai​ 计入答案。   如果有，就记最大被删数字位置为 jjj，将 aja_jaj​ 记录答案，aia_iai​ 删除，括号序列就会发生交换
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-10-28 16:18" pubdate>
+              2025-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/2025/08/18/%E9%A2%98%E8%A7%A3%EF%BC%9AP1059-NOIP2006-%E6%99%AE%E5%8F%8A%E7%BB%84-%E6%98%8E%E6%98%8E%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0/" target="_self">
           题解：P1059 [NOIP2006 普及组] 明明的随机数
         </a>
@@ -606,115 +768,13 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/07/27/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc416-d-ABC416D-Match-Mod-Minimize-2/" target="_self">
-          题解：AT_abc416_d [ABC416D] Match, Mod, Minimize 2
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/07/27/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc416-d-ABC416D-Match-Mod-Minimize-2/" target="_self">
-        <div>
-          题目说 0≤Ai,Bi&lt;M0\le A_i,B_i &lt;M0≤Ai​,Bi​&lt;M，有两种情况。  Ai+Bi&lt;MA_i+B_i &lt;MAi​+Bi​&lt;M，对答案贡献为 Ai+BiA_i+B_iAi​+Bi​。 Ai+Bi≥MA_i+B_i\ge MAi​+Bi​≥M，即 M≤Ai+Bi&lt;2MM\le A_i+B_i&lt;2MM≤Ai​+Bi​&lt;2M，对
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-07-27 15:55" pubdate>
-              2025-07-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2025/07/27/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc416-c-ABC416C-Concat-X-th/" target="_self">
-          题解：AT_abc416_c [ABC416C] Concat (X-th)
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2025/07/27/%E9%A2%98%E8%A7%A3%EF%BC%9AAT-abc416-c-ABC416C-Concat-X-th/" target="_self">
-        <div>
-          比较板的搜索。 就是从 NNN 个数里选出 KKK 个数，可以重复。 将搜出的数当作字符串下标，将字符串连接起来，放到一个 vector 里面，最后将 vector 排序，输出第 X−1X-1X−1 个就好了。 X−1X-1X−1 是因为我的下标是从 000 开始的。 赛时代码。 1234567891011121314151617181920212223#include&lt;bits/stdc+
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2025-07-27 11:40" pubdate>
-              2025-07-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
 
 
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
 
 
 
