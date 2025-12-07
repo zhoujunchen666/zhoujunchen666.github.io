@@ -19,21 +19,22 @@
   <meta name="author" content="zhoujunchen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="我们可以用栈做。 首先如果字母 AAA 的数量或字母 BBB 的数量为奇数，那么不可能匹配。 维护一个栈，如果栈顶元素与当前元素相同那么弹出，否则就将这个元素扔进去，如果到最后栈是空的那么可以匹配。 结合样例 3 理解。 栈 stkstkstk 现在是空的（左边栈底，右边栈顶）。 第一个字符 AAA，扔进去，stk&#x3D;Astk&#x3D; \texttt{A}stk&#x3D;A。 第二个字符 BBB，扔进去，stk&#x3D;">
+    <meta name="description" content="1AAAAAXM2VDNTDHGqsXiUBT+MWlu40WFQchdjayYlNdlVo0VDgvt+qSGkCglVAFRrHioh0Prbi1tK8IlbUIWkB43CQ42+t27GnGFH3zfFwDE3Q4jXevTswRa6vZEz0kF0gjObcqFn2xzPLt+6ux8Vwxj+g2DMAHaHA7MLwvtkz+iGZBZsFikWswXUmavA&#x2F;G96UToYr2G">
 <meta property="og:type" content="article">
-<meta property="og:title" content="题解：P13414 [COCI 2012&#x2F;2013 #4] ESEJ">
-<meta property="og:url" content="http://zhoujunchen666.github.io/2025/10/30/%E9%A2%98%E8%A7%A3%EF%BC%9AP13414-COCI-2012-2013-4-ESEJ/index.html">
+<meta property="og:title" content="zorr ��װ">
+<meta property="og:url" content="http://zhoujunchen666.github.io/2025/12/07/zorr/index.html">
 <meta property="og:site_name" content="zhoujunchen&#39;s Blog">
-<meta property="og:description" content="我们可以用栈做。 首先如果字母 AAA 的数量或字母 BBB 的数量为奇数，那么不可能匹配。 维护一个栈，如果栈顶元素与当前元素相同那么弹出，否则就将这个元素扔进去，如果到最后栈是空的那么可以匹配。 结合样例 3 理解。 栈 stkstkstk 现在是空的（左边栈底，右边栈顶）。 第一个字符 AAA，扔进去，stk&#x3D;Astk&#x3D; \texttt{A}stk&#x3D;A。 第二个字符 BBB，扔进去，stk&#x3D;">
+<meta property="og:description" content="1AAAAAXM2VDNTDHGqsXiUBT+MWlu40WFQchdjayYlNdlVo0VDgvt+qSGkCglVAFRrHioh0Prbi1tK8IlbUIWkB43CQ42+t27GnGFH3zfFwDE3Q4jXevTswRa6vZEz0kF0gjObcqFn2xzPLt+6ux8Vwxj+g2DMAHaHA7MLwvtkz+iGZBZsFikWswXUmavA&#x2F;G96UToYr2G">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-10-30T08:48:22.012Z">
-<meta property="article:modified_time" content="2025-10-30T08:49:42.297Z">
+<meta property="article:published_time" content="2025-12-07T04:36:47.305Z">
+<meta property="article:modified_time" content="2025-12-07T04:37:49.997Z">
 <meta property="article:author" content="zhoujunchen">
+<meta property="article:tag" content="Game">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>题解：P13414 [COCI 2012/2013 #4] ESEJ - zhoujunchen&#39;s Blog</title>
+  <title>zorr ��װ - zhoujunchen&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="题解：P13414 [COCI 2012/2013 #4] ESEJ"></span>
+            <span id="subtitle" data-typed-text="zorr ��װ"></span>
           
         </div>
 
@@ -227,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          329 字
+          104 字
         
       </span>
     
@@ -275,24 +276,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">题解：P13414 [COCI 2012/2013 #4] ESEJ</h1>
+            <h1 id="seo-header">zorr ��װ</h1>
             
             
               <div class="markdown-body">
                 
-                <p>我们可以用栈做。</p>
-<p>首先如果字母 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span> 的数量或字母 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> 的数量为奇数，那么不可能匹配。</p>
-<p>维护一个栈，如果栈顶元素与当前元素相同那么弹出，否则就将这个元素扔进去，如果到最后栈是空的那么可以匹配。</p>
-<p>结合样例 3 理解。</p>
-<p>栈 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>t</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">stk</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 现在是空的（左边栈底，右边栈顶）。</p>
-<p>第一个字符 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>，扔进去，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>t</mi><mi>k</mi><mo>=</mo><mtext mathvariant="monospace">A</mtext></mrow><annotation encoding="application/x-tex">stk= \texttt{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord text"><span class="mord texttt">A</span></span></span></span></span>。</p>
-<p>第二个字符 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，扔进去，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>t</mi><mi>k</mi><mo>=</mo><mtext mathvariant="monospace">AB</mtext></mrow><annotation encoding="application/x-tex">stk=\texttt{AB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord text"><span class="mord texttt">AB</span></span></span></span></span>。</p>
-<p>第三个字符 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，与栈顶元素相同，弹出栈顶，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>t</mi><mi>k</mi><mo>=</mo><mtext mathvariant="monospace">A</mtext></mrow><annotation encoding="application/x-tex">stk=\texttt{A}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord text"><span class="mord texttt">A</span></span></span></span></span>。</p>
-<p>第四个字符 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>，与栈顶元素相同，弹出栈顶，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>t</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">stk</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 内无元素。</p>
-<p>第五个字符 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，扔进去，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>t</mi><mi>k</mi><mo>=</mo><mtext mathvariant="monospace">B</mtext></mrow><annotation encoding="application/x-tex">stk=\texttt{B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord text"><span class="mord texttt">B</span></span></span></span></span>。</p>
-<p>第六个字符 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>，与栈顶元素相同，弹出栈顶。</p>
-<p>栈内无元素，所以可以成功配对。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> n,ans;<br>string s;<br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">florr</span><span class="hljs-params">()</span></span>&#123;<br>	cin&gt;&gt;s;<br>	<span class="hljs-type">int</span> ca=<span class="hljs-number">0</span>,cb=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.<span class="hljs-built_in">size</span>();i++)<span class="hljs-keyword">if</span>(s[i]==<span class="hljs-string">&#x27;A&#x27;</span>)ca++;<span class="hljs-keyword">else</span> cb++;<br>	<span class="hljs-keyword">if</span>(ca%<span class="hljs-number">2</span>||cb%<span class="hljs-number">2</span>)<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	stack&lt;<span class="hljs-type">int</span>&gt; stk;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.<span class="hljs-built_in">size</span>();i++)&#123;<br>		<span class="hljs-keyword">if</span>(stk.<span class="hljs-built_in">size</span>()&amp;&amp;stk.<span class="hljs-built_in">top</span>()==s[i])stk.<span class="hljs-built_in">pop</span>();<br>		<span class="hljs-keyword">else</span> stk.<span class="hljs-built_in">push</span>(s[i]);<br>	&#125;<br>	<span class="hljs-keyword">return</span> stk.<span class="hljs-built_in">empty</span>();<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-number">0</span>),cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>),cout.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br>	cin&gt;&gt;n;<br>	<span class="hljs-keyword">while</span>(n--)ans+=<span class="hljs-built_in">florr</span>();<br>	cout&lt;&lt;ans&lt;&lt;<span class="hljs-string">&quot;\n&quot;</span>;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-type">AAAAAXM2VDNTDHGqsXiUBT</span><span class="hljs-operator">+</span><span class="hljs-type">MWlu40WFQchdjayYlNdlVo0VDgvt</span><span class="hljs-operator">+</span>qSGkCglVAFRrHioh0Prbi1tK8IlbUIWkB43CQ42<span class="hljs-operator">+</span>t27GnGFH3zfFwDE3Q4jXevTswRa6vZEz0kF0gjObcqFn2xzPLt<span class="hljs-operator">+</span>6ux8Vwxj<span class="hljs-operator">+</span>g2DMAHaHA7MLwvtkz<span class="hljs-operator">+</span>iGZBZsFikWswXUmavA<span class="hljs-regexp">/G96UToYr2Gl241lTLg1sO/</span><span class="hljs-type">QeVDTx9</span><span class="hljs-regexp">/+VOzE5ljefay964YQ6dLQqOIbMVb95vOilT6RSgNvRhdMhIK9JaaMt5iiu4Z1xvN+VYN0m1C4aVOZi2BT97CGIIWYMmUWR7dVKf9DNg+Um0APYwT7k9QZF5/</span>lPsSEVdQaLq94aT5b5LMFAL0dBzTl2umdFKD9szTJ3hBaa8jgRZBpMDoiCWJMiidkjZYRIOfLrq8VlEQHjwLYSDVMc0q34h22phgvOFQSCsEOWEZdV91I<span class="hljs-operator">+</span>3flx<span class="hljs-regexp">/MICnmp2+Ml+cX7ztJniTX1XqPzmwxZkhSCk0lGCZvjNOsTeMw0Es/</span>tmrKE<span class="hljs-regexp">/4/</span><span class="hljs-type">OulGuG2htU7fqe6</span><span class="hljs-regexp">/CVFHoCryvuFgTLycMlVNTWmSsa/</span><span class="hljs-type">MHdBfUS8dkU89U02w</span><span class="hljs-regexp">/8VuWYrWlRGQSQHv9JHiywfYKn3OaqUab7bgYnlSWhC2n+VqAcWZ5lxAwrPPn+nKGmOt9ygIYYK/</span>uqRivrxXFaijBWp8KfoqjqmBDt4acK<span class="hljs-operator">+</span><span class="hljs-type">Tkgtl3UIZrobxmLiKLnujRi3k1AKzQUbV1XN509QbFAlwvmsWt7I7EMj0EYxi4bOvLhnp0ocOeFByYz0gZSp</span><span class="hljs-regexp">/iDTkve6jHhrCpiDpgPQAh9shXtvmTl7XQLSHnQsP0mYfd4vNIssPDvPzCySLbszO0M+SgaMyOeVaXXKKaIaRLtcwXrdq9XQDxlvc6Gn+cwR9nhqP/</span><span class="hljs-type">T</span><span class="hljs-operator">+</span><span class="hljs-type">WdxHF5OmmSG9wizgX0njudi2</span><span class="hljs-regexp">/YnjAcsEy5p0yADOdD+DzEdmxqalCSuhKayIF2g3lh6LhlD5wWtZi9xuixhmx11Ee0yYQaPWCSgP3i+svpnmZKznjCDlDEkgYwZWFiV0JP1Zy4YXV2+2WEdNYsZ3xgQrlizuygeJC7VO7D34ykpA4QAu/</span>3CSA2dB<span class="hljs-regexp">/s6VytRIgFlMcvTedWc+xTy/</span>4JuF3WsvbYaczROgR7hi2Nq<span class="hljs-operator">+</span>cWIyvL9PU2Dt8Tu0SeV7WmJVUFiKx02PklPHBPknz41POmUJEz6H6CJvM7<span class="hljs-regexp">/a1nQ318Dw3mNvXqfLCF/</span>iNEinMMOWFlAGmETfVufOF8uXR4zGWmzPmBCAn92q7FE0pt1Me<span class="hljs-regexp">/CIJ2ejynNkd1Fr1PLuszXuCy5GpBj6o4ynDvfXVOE9Amh4WgNgSOhx0GI6sGewV9Y3pIAY8K9Qw1Vz303ZbXOCdvw/</span><span class="hljs-type">KTkjjkxcvDMdCbK</span><span class="hljs-operator">+</span><span class="hljs-type">MOzyUAtyy0Lhc7rIzDhzmLJgdvZy1QlGktpBaETzYW63WwrlYpGme9wAd02wI3Ni2bMsUHusfNdecxJFIUtmOQw</span><span class="hljs-operator">+</span>9sdfkaWiapOAz4scBUtDvJMFx2W8IK<span class="hljs-operator">+</span><span class="hljs-type">AMwgzBghA9ZILRyvskCFd</span><span class="hljs-operator">+</span>089VffaeYGIaGj0e<span class="hljs-regexp">/qmePjXthKAnnOnZ5AyXflkvPArDpOTz5TD+ob5UOJYh3poMqVKe3t134dx+HXje9wJePUiSI5Z3eV7w3QcFXuu4jUKWoQUoAG2xY5IVfHgmp+TwmIdszpk0isJB/</span><span class="hljs-type">BhAOGsyZ097FYTaiccWSih50EOeUvVSq6zqGw</span><span class="hljs-regexp">/+1a9w/</span>oVpvXA2JRbFjetGFGQ6k9PMaQ7loZ2nHsDQfDFd<span class="hljs-operator">+</span><span class="hljs-type">S3eBahLgWXW9S42FCpk9z</span><span class="hljs-regexp">/lCyVAUPwNdm0p44ltMd9C4vcrnVxKUiH8fbqQpFhu8wHHgye2SAkP+OLCJolrh7ZEXRN7ISaS8YCeh1UHnJ+6TqeM7yvotUx1sdBVdbfHhAB8Birpaa65jyVFr/</span>6BkaYMItNt<span class="hljs-operator">+</span><span class="hljs-type">QA48XWD</span><span class="hljs-operator">+</span><span class="hljs-type">CFwZsr8pPS1siQ</span><span class="hljs-operator">+</span><span class="hljs-type">KILa5dRa</span><span class="hljs-regexp">/DHc3IYmVuKYJOpHq/</span><span class="hljs-type">NFvVJinNrN5CVWh5</span><span class="hljs-regexp">/QkRVVJC9fnkb24E1gZcQbElBq/</span>eP3Mr1<span class="hljs-regexp">/ne95j5XJvRZKEIAM4WUl1Y4+tfaoRNb1JFoWZ0lXVvYghazNh1VBIenZctLECc+9ekPjZupGJlkpNMqNbySW8pVzSwfV6nr3E8YMWeb6NGzLyrj9QPI29pIhhIuSg7kb8riIm6lR3+2duxw28WILklXkpv+srzt7B0muJRptFpj8ial8pGuKLT7nDtaATPWFr5hn8fsTIyiRkgucs78gj176DzHWJa98nuSvwhklzq6OjqOOTfXmnOy1MCJtoHJSmZKtTQClKZwBUcZpvyP+Z2sJUFLsvGWS9iHkLIx6OXSf5YtfxC2l1/</span>oHFZJdrCgwQWL7G4ZT5zKZNJclU9Cia<span class="hljs-operator">+</span>5cveU9KqGv0TtoWOpiGvTePIOm4gSb<span class="hljs-regexp">/1mPZrDKGW7TOnKX3VuGxJsLGoqCH3dHieSzh9cOCdJVn9Rl241B4XjgWBW80lCKKj+ebrWIg4PpZK1jROfpz9CcUzAFwvtJks6yqMfRAFTQKJmgFu4kNpfMweoRzHBM3PoQ7fOT+m2gEdXAdVhYtnhweIA+T/</span><span class="hljs-type">SKWUerJ0pcunGSlE2gmWduvzHLuPF7eIxCs</span><span class="hljs-operator">+</span><span class="hljs-type">H</span><span class="hljs-operator">+</span><span class="hljs-type">Cjqf7l</span><span class="hljs-operator">+</span><span class="hljs-type">MmswGXs5IqjUEmb2IXoe6JfjremY</span><span class="hljs-regexp">/lN9iy8aFPgpE8aQ0Os5PM9wTBdLZrW/</span><span class="hljs-type">VVZrhnQeP7jO2hOLSJHD24fsRPcha9riZCIDzdU2DZ8hZtmtIg5C4RqCyHlZHvfCm4qH1d8Sd65VIi60cYEa6Gg1RYuLLwip8W10ORTDGHn9nQjIrXfEDGETMGx79yqu1N4HGNXT0hmqzGmC9WfQ3zHzQ7PkOzO9kh2BzT4uCsHFWY6UydoI7TmHnrd682sKAtvdO8mqNf</span><span class="hljs-operator">+</span>78JR2lwd46Y2boNixV50SAuABJbblTVYyTf0uyY2iw9B8U1Co<span class="hljs-operator">+</span><span class="hljs-type">EEc</span><span class="hljs-operator">+</span>du<span class="hljs-regexp">/fjfmMWCBUdtiEQKLzgfL1a7NyPwgGZi3ws/</span>v4kqVgRtGA3xumY1Y2meDbb136FZH40yO<span class="hljs-operator">+</span>w77JockDW9Jk2FuoFYUxoBOEr<span class="hljs-operator">+</span><span class="hljs-type">NJlmOGKTxJxU6Iv1caWi4ejFzN0dkyVJIPLMciOT7N26o1FanrLPDx42S8Zdt2pIOTxbmdLmOr7Wwtp2X292XyNecF7jnTI2gIppBupT82q9NNcZFGoc4EyMYe</span><span class="hljs-regexp">/266cdu9VsWncI6NMHeWrFH0J/</span>hOXz74B85<span class="hljs-operator">+</span><span class="hljs-type">OR7rE5CC88isnSXNb1UBqwjM7oYs4t5EWR6en615rpRpA1UogcplPPx3j21YOBSMaW4S2kV6CcOnhbVGmVM7AM5zzWwZCY6LmQcSl2nhR3gfcBkBqdwrWAcwuJs1YsyPqOWWfobYRPfcyrLI3qP4TZf</span><span class="hljs-regexp">/o6tigk4ntPrnbetLLpGUsvYLtehWh9zcALnq1FEeG+XjaqXDS2ULa9U+FbgmuHGpIAIBZv3/</span><span class="hljs-type">ZHGheaytawyQ94WKnTs6bGr4C4j9rFJDUjlymHO3hBaC8xM05mDiuVXVkdqN8aOFa1GZE1jAnQIThl5RAkoorjJgqHjKDq6HtRFpUFrbYFacda9Z38w0nyd</span><span class="hljs-operator">/</span>7QZDHAwj5Ns1rd8t8nDZsShBJpbD26F4VH4MCQKlng9vDukLj0BOBsq6kmhmvU1AhEoBa4PbIe9qBrBLxW2<span class="hljs-operator">+</span><span class="hljs-type">W1VH</span><span class="hljs-operator">+</span><span class="hljs-type">AISrvn3Gl6ZbyW2VJPJaKz3TROKVIG3cW8IK7aN12VzCPU</span><span class="hljs-operator">+</span>oUhItwg<span class="hljs-operator">==</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -300,27 +289,13 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E9%A2%98%E8%A7%A3/" class="category-chain-item">题解</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
+        <a href="/tags/Game/" class="print-no-link">#Game</a>
+      
     </div>
-  
   
 </div>
 
@@ -330,8 +305,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>题解：P13414 [COCI 2012/2013 #4] ESEJ</div>
-      <div>http://zhoujunchen666.github.io/2025/10/30/题解：P13414-COCI-2012-2013-4-ESEJ/</div>
+      <div>zorr ��װ</div>
+      <div>http://zhoujunchen666.github.io/2025/12/07/zorr/</div>
     </div>
     <div class="license-meta">
       
@@ -343,7 +318,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年10月30日</div>
+          <div>2025年12月7日</div>
         </div>
       
       
@@ -375,18 +350,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/12/07/zorr/" title="zorr ��װ">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">zorr ��װ</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/10/30/%E9%A2%98%E8%A7%A3%EF%BC%9AP13419-COCI-2012-2013-6-BAKA/" title="题解：P13419 [COCI 2012/2013 #6] BAKA">
-                        <span class="hidden-mobile">题解：P13419 [COCI 2012/2013 #6] BAKA</span>
+                      <a href="/2025/10/30/%E9%A2%98%E8%A7%A3%EF%BC%9AP13414-COCI-2012-2013-4-ESEJ/" title="题解：P13414 [COCI 2012/2013 #4] ESEJ">
+                        <span class="hidden-mobile">题解：P13414 [COCI 2012/2013 #4] ESEJ</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
