@@ -1,3 +1,8 @@
+---
+title: 2048
+date: 2026-08-27 17:21:04
+---
+
 <!DOCTYPE html>
 <html>
 <head>
