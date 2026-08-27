@@ -19,13 +19,15 @@
   <meta name="author" content="zhoujunchen">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
+    <meta name="description" content="2048                                                 2048                0         0             &lt;div class&#x3D;&quot;above-game&quot;&gt;   &lt;p class&#x3D;&quot;game-intro&quot;&gt;Join the numbe">
+<meta property="og:type" content="website">
 <meta property="og:title" content="2048">
 <meta property="og:url" content="http://zhoujunchen666.github.io/2048/index.html">
 <meta property="og:site_name" content="zhoujunchen&#39;s Blog">
+<meta property="og:description" content="2048                                                 2048                0         0             &lt;div class&#x3D;&quot;above-game&quot;&gt;   &lt;p class&#x3D;&quot;game-intro&quot;&gt;Join the numbe">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-08-27T09:21:04.000Z">
-<meta property="article:modified_time" content="2026-08-27T09:21:04.731Z">
+<meta property="article:modified_time" content="2026-08-27T09:24:14.907Z">
 <meta property="article:author" content="zhoujunchen">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -231,7 +233,103 @@
                 
 
 <article class="page-content">
-  
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+<pre><code class="hljs">&lt;div class=&quot;above-game&quot;&gt;
+  &lt;p class=&quot;game-intro&quot;&gt;Join the numbers and get to the &lt;strong&gt;2048 tile!&lt;/strong&gt;&lt;/p&gt;
+  &lt;a class=&quot;restart-button&quot;&gt;New Game&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;game-container&quot;&gt;
+  &lt;div class=&quot;game-message&quot;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;div class=&quot;lower&quot;&gt;
+        &lt;a class=&quot;keep-playing-button&quot;&gt;Keep going&lt;/a&gt;
+      &lt;a class=&quot;retry-button&quot;&gt;Try again&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;grid-container&quot;&gt;
+    &lt;div class=&quot;grid-row&quot;&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-row&quot;&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-row&quot;&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-row&quot;&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;grid-cell&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;tile-container&quot;&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p class=&quot;game-explanation&quot;&gt;
+  &lt;strong class=&quot;important&quot;&gt;How to play:&lt;/strong&gt; Use your &lt;strong&gt;arrow keys&lt;/strong&gt; to move the tiles. When two tiles with the same number touch, they &lt;strong&gt;merge into one!&lt;/strong&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+&lt;strong class=&quot;important&quot;&gt;Note:&lt;/strong&gt; This site is the official version of 2048. You can play it on your phone via &lt;a href=&quot;http://git.io/2048&quot;&gt;http://git.io/2048.&lt;/a&gt; All other apps or sites are derivatives or fakes, and should be used with caution.
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+Created by &lt;a href=&quot;http://gabrielecirulli.com&quot; target=&quot;_blank&quot;&gt;Gabriele Cirulli.&lt;/a&gt; Based on &lt;a href=&quot;https://itunes.apple.com/us/app/1024!/id823499224&quot; target=&quot;_blank&quot;&gt;1024 by Veewo Studio&lt;/a&gt; and conceptually similar to &lt;a href=&quot;http://asherv.com/threes/&quot; target=&quot;_blank&quot;&gt;Threes by Asher Vollmer.&lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+  </div>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</html>
+
 
   
 
@@ -381,5 +479,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</body>
 </html>
