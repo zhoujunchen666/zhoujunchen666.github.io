@@ -1,8 +1,8 @@
 // ���ֻ�����ʾ�ı���ͼƬ����
-const mobileBgImageUrl = "url('https://cdn.luogu.com.cn/upload/image_hosting/gpua9m0b.png')";
+const mobileBgImageUrl = "url('https://cdn.luogu.com.cn/upload/image_hosting/5ne3g27v.png')";
 
 // �ڵ��Զ���ʾ�ı���ͼƬ����
-const desktopBgImageUrl = "url('https://cdn.luogu.com.cn/upload/image_hosting/gpua9m0b.png')";
+const desktopBgImageUrl = "url('https://cdn.luogu.com.cn/upload/image_hosting/5ne3g27v.png')";
 
 // ���ֻ������ñ���ͼƬ
 if (window.innerWidth < 768) {
